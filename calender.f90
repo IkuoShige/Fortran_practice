@@ -11,11 +11,11 @@
         total = total + 365 + checkUruu(i)
         i=i+1
       end do
+      !do month = 1, 12
+      if(checkUruu(year)==1) then
+        month_date(2) = month_date(2)+1
+      end if
       do month = 1, 12
-        if(checkUruu(year)==1) then
-          month_date(2) = month_date(2)+1
-        end if
-
         print *, "	", year, "年"
         print *,  month, "月"
         write(*, fmt='(a)', advance='no') " 月 火 水 木 金 土 日"
